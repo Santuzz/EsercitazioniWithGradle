@@ -1,3 +1,5 @@
+package basics;
+
 /**
  * You can find many more here:
  * https://www.w3resource.com/java-exercises/string/index.php
@@ -9,7 +11,7 @@
 public class Strings {
     /**
      * Write a function accepting a string[]
-     * returning a single String representing the concatenation of all Strings of the array
+     * returning a single String representing the concatenation of all basics.Strings of the array
      * see StringBuilder
      */
     public static String concatenate(String[] strings) {
@@ -67,7 +69,7 @@ public class Strings {
      * returning true if "good" appears at the beginning of the string
      */
     public static boolean goodAtTheBeginning(String s) {
-        return s.substring(0, 4).toString().equals("good");
+        return s.startsWith("good");
     }
 
     /**
@@ -77,7 +79,7 @@ public class Strings {
      * see substring() method
      */
     public static boolean goodAroundTheBeginning(String s) {
-        return s.substring(0, 4).equals("good") || s.substring(1, 5).equals("good");
+        return s.startsWith("good") || s.startsWith("good", 1);
     }
 
     /**

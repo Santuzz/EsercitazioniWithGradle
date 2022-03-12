@@ -1,3 +1,6 @@
+package basics;
+
+import basics.Arrays;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
