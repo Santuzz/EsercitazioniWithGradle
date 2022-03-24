@@ -17,7 +17,7 @@ import java.util.Arrays;
  *
  * @author Nicola Bicocchi
  */
-public class Polygon {
+public class Polygon{
     Point[] vertices;
 
     public Polygon(Point[] vertices) {
@@ -42,8 +42,8 @@ public class Polygon {
 
     public double getArea(){
         double a = 0;
-        for(int i = 0; i < vertices.length-1; i++){
-            a +=vertices[i+1].x * vertices[i].y - vertices[i+1].y * vertices[i].y;
+        for(int i = vertices.length-1; i > 0 ; i--){
+            a +=vertices[i-1].x * vertices[i].y - vertices[i-1].y * vertices[i].x;
         }
         return a/2;
     }
