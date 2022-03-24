@@ -11,25 +11,19 @@ package objectoriented;
  * double avg() ritorna la media di tutti i numeri presenti nella tavola
  */
 public class Table {
-    int a, b;
+    int a,b;
 
-    public Table() {
-        super();
-        this.a = 10;
-        this.b = 10;
+    public Table(){
+        a = 10;
+        b = 10;
     }
 
-    public Table(int a, int b) {
-        super();
-        this.a = a;
-        this.b = b;
+    public Table(int r, int c){
+        a = r;
+        b = c;
     }
 
-    public double avg() {
-        return sum() / (a * b);
-    }
-
-    public double sum() {
+    public double sum(){
         double sum = 0;
         for (int i = 1; i <= a; i++) {
             for (int j = 1; j <= b; j++) {
@@ -39,16 +33,20 @@ public class Table {
         return sum;
     }
 
+    public double avg(){
+        return sum() / (a * b);
+    }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder str = new StringBuilder();
         for (int i = 1; i <= a; i++) {
             for (int j = 1; j <= b; j++) {
-                sb.append(i * j);
-                sb.append("\t");
+                str.append(i * j);
+                str.append("\t");
             }
-            sb.append("\n");
+            str.append("\n");
         }
-        return sb.toString();
+        return str.toString();
     }
 }

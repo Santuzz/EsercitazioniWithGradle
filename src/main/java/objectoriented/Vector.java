@@ -1,5 +1,8 @@
 package objectoriented;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.*;
 import java.util.random.RandomGenerator;
 import java.util.random.RandomGeneratorFactory;
 
@@ -24,6 +27,7 @@ public class Vector {
     public String show() {
         StringBuilder b = new StringBuilder();
         b.append("[");
+        Set<String> s = new HashSet<>();
         for (int i = 0; i < v.length; i++) {
             b.append(String.format("%d, ", v[i]));
         }
